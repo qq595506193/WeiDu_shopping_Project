@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/ck_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_child_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@id/ck_03"
+        app:layout_constraintLeft_toRightOf="@id/ck_03"
+        app:layout_constraintTop_toTopOf="@id/ck_03" />
+
+    <TextView
+        android:id="@+id/tv_child_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="name"
+        app:layout_constraintLeft_toRightOf="@id/iv_child_icon"
+        app:layout_constraintRight_toLeftOf="@id/add_minus"
+        app:layout_constraintTop_toTopOf="@id/iv_child_icon" />
+
+    <TextView
+        android:id="@+id/tv_child_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="￥:"
+        android:textColor="#ff0000"
+        app:layout_constraintBottom_toBottomOf="@id/iv_child_icon"
+        app:layout_constraintLeft_toRightOf="@id/iv_child_icon"
+        app:layout_constraintRight_toLeftOf="@id/add_minus" />
+
+    <com.changhao.weidu_shopping_demo.widget.AddMinusView
+        android:id="@+id/add_minus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tv_child_name"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_01"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp">
+
+        <ImageButton
+            android:id="@+id/imageBtn_menu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:background="#ffffff"
+            android:src="@drawable/common_nav_btn_menu" />
+
+        <ImageButton
+            android:id="@+id/imageBtn_search"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:background="#ffffff"
+            android:src="@drawable/common_nav_btn_search" />
+
+
+    </RelativeLayout>
+
+    <com.stx.xhb.xbanner.XBanner
+        android:id="@+id/xBanner"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        app:AutoPlayTime="3000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_01"
+        app:pointsContainerBackground="#44AAAAAA"
+        app:pointsPosition="RIGHT"
+        app:tipTextColor="#FFFFFFFF"
+        app:tipTextSize="16.0sp" />
+
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/rv_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/xBanner" />
+
+
+</android.support.constraint.ConstraintLayout>
